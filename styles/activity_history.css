@@ -1,0 +1,44 @@
+.content_r .title {
+	margin: 20px 30px;
+	padding: 10px 10px;
+	font-size: 24px;
+	border-bottom: 1px solid #737373;
+	color: #292929;
+}
+#list {
+	margin: 30px;
+}
+#list li {
+	margin-top: 15px;
+	margin-bottom: 15px;
+	padding: 20px;
+	border-radius: 5px;
+	box-shadow: 0px 0px 3px #BFBFBF;
+	background-color: #FAFCFE;
+	color: #777777;
+}
+#list li h3 {
+	padding: 5px;
+}
+#list li h3 span{
+	float: right;
+	font-size: 10px;
+	font-weight: normal;
+}
+#more,
+#more:active,
+#more:focus {
+	padding: 5px;
+	width: 100%;
+	color: #777777;
+	background-color: #FAFCFE;
+	border-radius: 5px;
+	border: none;
+	box-shadow: 0px 0px 3px #BFBFBF;
+	font-family: inherit;
+	outline: none;
+}
+#more:hover {
+	background-color: #E0F0FF;
+	cursor: pointer;
+}
