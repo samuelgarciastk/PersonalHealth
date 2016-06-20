@@ -176,3 +176,12 @@ a.rectangle:active {
 	background-color: #FFFFFF;
 	box-shadow: 0px 0px 10px #737373;
 }
+#gotop {
+	display: none;
+	width: 55px;
+	height: 55px;
+	position: fixed;
+	right: 50px;
+	bottom: 50px;
+	background: url(../images/backtop.png) -70px 0px;
+}

@@ -85,6 +85,7 @@
 				<div>
 					<label for="new_pw">新密码</label>
 					<input type="password" id="new_pw">
+					<label class="lint">密码至少需要6位</label>
 				</div>
 				<div>
 					<label for="confirm_pw">再输一次</label>

@@ -40,7 +40,25 @@ function getMessage() {
         }
     });
 }
+function goTop() {
+    $(window).scroll(function () {
+        if ($(window).scrollTop() > 100)
+            $("#gotop").fadeIn(500);
+        else
+            $("#gotop").fadeOut(500);
+    });
+}
 $(function() {
-	getPortrait();
-	getMessage();
+    getPortrait();
+    getMessage();
+    goTop();
+    $("#gotop").click(function() {
+        $('body, html').animate({scrollTop:0}, 500);
+    })
+    $("#gotop").mouseover(function() {
+        $(this).css("background","url(../../images/backtop.png) no-repeat 0px 0px");
+    });
+    $("#gotop").mouseout(function() {
+        $(this).css("background","url(../../images/backtop.png) no-repeat -70px 0px");
+    });
 });
