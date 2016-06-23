@@ -22,7 +22,7 @@ function createMessage() {
 		'content': content,
 		'class': classType},
 		success: function(data) {
-			if (data == true) {
+			if (data) {
 				showMsg('提出建议成功');
 			} else {
 				showMsg('无法提出建议');
@@ -42,34 +42,11 @@ function showMsg(msg) {
 	var error = $("#error_msg");
 	error.addClass('msg');
 	error.text(msg);
+	$("#msg_bg").fadeIn(200);
+	$("#msg_content").fadeIn(400);
+	$("#msg_content").text(msg);
+	setTimeout(function () {
+		$("#msg_bg").fadeOut(200);
+		$("#msg_content").fadeOut(400);
+	}, 5000);
 }
-function canUse() {
-	$.ajax({
-		url: '../../include/getAuthority.php',
-		success: function(data) {
-			var num = eval(data)[0]['authority'];
-			if (num == 0 || num == 1 || num == 2) {
-				show();
-			} else {
-				showMsg('您没有权限');
-			}
-		}
-	});
-	function show() {
-		html = "<form class='form_create'>";
-		html += "<div><label>建议类型</label>";
-		html +=	"<input type='radio' name='msg_type' id='system_msg' value='0' onchange='changeType()'' checked='checked'>";
-		html += "<label for='system_msg' class='special'>系统建议</label>";
-		html += "<input type='radio' name='msg_type' id='user_msg' value='1' onchange='changeType()'>";
-		html += "<label for='user_msg' class='special'>用户建议</label></div>";
-		html += "<div><label for='form_title'>建议题目</label>";
-		html += "<input type='text' id='form_title'></div>";
-		html += "<div><label for='form_content'>建议内容</label>";
-		html += "<textarea id='form_content' cols='' rows=''></textarea></div>";
-		html += "<input type='button' id='save' value='提交'' onclick='createMessage()'></form>";
-		$(".content_r").append(html);
-	}
-}
-$(function() {
-	canUse();
-});

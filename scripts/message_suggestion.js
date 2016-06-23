@@ -27,12 +27,6 @@ function getSuggestion() {
 			html += "<li class='state"+item['isread']+"'><h3>来自: "+item['userfrom']+"<span>"+item['datetime']+"</span></h3><h4>"+item['title']+"</h4><p>"+content+"</p></li>";
 			json.push({'username': item['username'], 'userfrom': item['userfrom'], 'datetime': item['datetime'], 'title': item['title'], 'content': item['content'], 'class': item['class']});
 		});
-		$.ajax({
-			type: 'POST',
-			url: '../../include/setRead.php',
-			data: {'json': json},
-			success: getMessage
-		});
 		$(html).insertBefore("#more");
 		offset += limit;
 		if (array.length < limit) {
@@ -40,6 +34,12 @@ function getSuggestion() {
 		} else {
 			$("#more").attr('value', "点击加载更多...");
 		}
+		$.ajax({
+			type: 'POST',
+			url: '../../include/setRead.php',
+			data: {'json': json},
+			success: getMessage
+		});
 	}
 }
 $(function() {

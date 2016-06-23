@@ -9,6 +9,7 @@
 	<script src="../../scripts/jquery-2.1.4.min.js"></script>
 	<script src='../../scripts/global.js'></script>
 	<script src='../../scripts/message_suggestion.js'></script>
+	<script src='../../scripts/canUse_create_message.js'></script>
 </head>
 <body>
 	<div class="header_bg">
@@ -56,7 +57,7 @@
 						<p>我的建议</p>
 					</a>
 				</li>
-				<li>
+				<li class="authority" style="display: none">
 					<a href="create_message.php">
 						<p>提出建议</p>
 					</a>

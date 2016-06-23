@@ -89,5 +89,7 @@
 			</form>
 		</div>
 	</div>
+	<div id="msg_bg"></div>
+	<div id="msg_content"></div>
 </body>
 </html>

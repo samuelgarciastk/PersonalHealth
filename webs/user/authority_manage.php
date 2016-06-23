@@ -9,6 +9,7 @@
 	<script src="../../scripts/jquery-2.1.4.min.js"></script>
 	<script src='../../scripts/global.js'></script>
 	<script src='../../scripts/authority_manage.js'></script>
+	<script src='../../scripts/canUse_authority_manage.js'></script>
 </head>
 <body>
 	<div class="header_bg">
@@ -61,7 +62,7 @@
 						<p>导入数据</p>
 					</a>
 				</li>
-				<li>
+				<li class="authority" style="display: none">
 					<a href="authority_manage.php" class="on">
 						<p>权限管理</p>
 					</a>
@@ -75,8 +76,22 @@
 		</div>
 		<div class="content_r fl">
 			<div class="title">权限管理</div>
-			<span id='error_msg'>&nbsp;</span>
+			<span id="error_msg">&nbsp;</span>
+			<form id="added_form" class="tc">
+				<input type="text" id="userId" placeholder="用户名" />
+				<div>
+					<input type="radio" name="radio_auth" id="doctor" value="2" />
+					<label for="doctor">医生</label>
+					<input type="radio" name="radio_auth" id="coach" value="1" />
+					<label for="coach">教练</label>
+					<input type="radio" name="radio_auth" id="normal" value="3" />
+					<label for="normal">普通用户</label>
+				</div>
+				<input type="button" value="提交" id="submit" onclick="changeAuth()" />
+			</form>
 		</div>
 	</div>
+	<div id="msg_bg"></div>
+	<div id="msg_content"></div>
 </body>
 </html>

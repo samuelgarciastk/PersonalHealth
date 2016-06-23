@@ -61,4 +61,8 @@ $(function() {
     $("#gotop").mouseout(function() {
         $(this).css("background","url(../../images/backtop.png) no-repeat -70px 0px");
     });
+    $("#msg_bg").click(function () {
+        $("#msg_bg").fadeOut(200);
+        $("#msg_content").fadeOut(400);
+    })
 });

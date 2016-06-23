@@ -9,5 +9,5 @@ $db = new SQLite3('../data/PersonalHealth.db');
 $sql = "INSERT INTO message (username, userfrom, datetime, title, content, isread, class) VALUES ('".$username."', '".$_SESSION['user']."', '".$datetime."', '".$title."', '".$content."', 0, ".$class.");";
 $result = $db->exec($sql);
 $db->close();
-echo $result;
+return $result;
 ?>

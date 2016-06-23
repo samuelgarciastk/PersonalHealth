@@ -9,6 +9,7 @@
 	<script src="../../scripts/jquery-2.1.4.min.js"></script>
 	<script src='../../scripts/global.js'></script>
 	<script src='../../scripts/create_message.js'></script>
+	<script src='../../scripts/canUse_create_message.js'></script>
 </head>
 <body>
 	<div class="header_bg">
@@ -56,7 +57,7 @@
 						<p>我的建议</p>
 					</a>
 				</li>
-				<li>
+				<li class="authority" style="display: none">
 					<a href="create_message.php" class="on">
 						<p>提出建议</p>
 					</a>
@@ -66,7 +67,27 @@
 		<div class="content_r fl">
 			<div class="title">提出建议</div>
 			<span id="error_msg">&nbsp;</span>
+			<form class="form_create">
+				<div>
+					<label>建议类型</label>
+					<input type="radio" name="msg_type" id="system_msg" value="0" onchange="changeType()" checked="checked">
+					<label for="system_msg" class="special">系统建议</label>
+					<input type="radio" name="msg_type" id="user_msg" value="1" onchange="changeType()">
+					<label for="user_msg" class="special">用户建议</label>
+				</div>
+				<div>
+					<label for="form_title">建议题目</label>
+					<input type="text" id="form_title">
+				</div>
+				<div>
+					<label for="form_content">建议内容</label>
+					<textarea id="form_content" cols="" rows=""></textarea>
+				</div>
+				<input type="button" id="save" value="提交" onclick="createMessage()">
+			</form>
 		</div>
 	</div>
+	<div id="msg_bg"></div>
+	<div id="msg_content"></div>
 </body>
 </html>

@@ -8,6 +8,8 @@
 	<link href="../../styles/user_portrait.css" rel="stylesheet">
 	<script src="../../scripts/jquery-2.1.4.min.js"></script>
 	<script src='../../scripts/global.js'></script>
+	<script src='../../scripts/user_portrait.js'></script>
+	<script src='../../scripts/canUse_authority_manage.js'></script>
 </head>
 <body>
 	<div class="header_bg">
@@ -60,7 +62,7 @@
 						<p>导入数据</p>
 					</a>
 				</li>
-				<li>
+				<li class="authority" style="display: none">
 					<a href="authority_manage.php">
 						<p>权限管理</p>
 					</a>
@@ -77,14 +79,17 @@
 				<a href="user_info.php" class="info">个人资料</a>
 				<a href="javascript:;" class="portrait">头像设置</a>
 			</div>
+			<span id="update_msg">&nbsp;</span>
 			<div class="photo tc">
 				<img src="../../images/blank_portrait.png" alt="头像">
 			</div>
-			<form action="" method="post" class="form_portrait">
+<!--			<form action="" method="post" class="form_portrait">-->
 				<input type="file" value="选择文件" id="file_portrait">
-				<input type="submit" value="上传" id="upload">
-			</form>
+				<input type="submit" value="上传" id="upload" onclick="showMsg('上传成功')">
+<!--			</form>-->
 		</div>
 	</div>
+	<div id="msg_bg"></div>
+	<div id="msg_content"></div>
 </body>
 </html>

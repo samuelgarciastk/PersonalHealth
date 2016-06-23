@@ -3,7 +3,7 @@ $nameList = ['Admin', 'Bob', 'Caesar', 'Isaac'];
 $xml = new DOMDocument('1.0', 'utf-8');
 $root = $xml->createElement('health');
 $xml->appendChild($root);
-for ($i = 0; $i < 10; $i++) {
+for ($i = 0; $i < 500; $i++) {
 	$user = $xml->createElement('user');
 
 	$name = $xml->createAttribute('name');
@@ -12,7 +12,7 @@ for ($i = 0; $i < 10; $i++) {
 	$user->appendChild($name);
 
 	$date = $xml->createAttribute('date');
-	$date_text = $xml->createTextNode(date('Y-m-d', mt_rand(strtotime('2000-01-01'), strtotime('2015-12-7'))));
+	$date_text = $xml->createTextNode(date('Y-m-d', mt_rand(strtotime('2016-03-01'), strtotime('2016-07-03'))));
 	$date->appendChild($date_text);
 	$user->appendChild($date);
 

@@ -9,6 +9,7 @@
 	<script src="../../scripts/jquery-2.1.4.min.js"></script>
 	<script src='../../scripts/global.js'></script>
 	<script src='../../scripts/user_info.js'></script>
+	<script src='../../scripts/canUse_authority_manage.js'></script>
 </head>
 <body>
 	<div class="header_bg">
@@ -61,7 +62,7 @@
 						<p>导入数据</p>
 					</a>
 				</li>
-				<li>
+				<li class="authority" style="display: none">
 					<a href="authority_manage.php">
 						<p>权限管理</p>
 					</a>
@@ -103,5 +104,7 @@
 			</form>
 		</div>
 	</div>
+	<div id="msg_bg"></div>
+	<div id="msg_content"></div>
 </body>
 </html>
