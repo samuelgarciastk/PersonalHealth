@@ -40,6 +40,17 @@ function getMessage() {
         }
     });
 }
+function haveAttention() {
+    $.ajax({
+        url: '../../include/getAuthority.php',
+        success: function(data) {
+            var num = eval(data)[0]['authority'];
+            if (num == 1 || num == 2) {
+                $(".attention").show();
+            }
+        }
+    });
+}
 function goTop() {
     $(window).scroll(function () {
         if ($(window).scrollTop() > 100)
@@ -51,6 +62,7 @@ function goTop() {
 $(function() {
     getPortrait();
     getMessage();
+    haveAttention();
     goTop();
     $("#gotop").click(function() {
         $('body, html').animate({scrollTop:0}, 500);

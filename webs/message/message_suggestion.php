@@ -24,6 +24,9 @@
 						<li class="fl tc">
 							<a href="../activity/activity_list.php">活动</a>
 						</li>
+						<li class="fl tc attention" style="display: none">
+							<a href="../manage/manage_link.php">关注</a>
+						</li>
 					</ul>
 				</div>
 				<div class="user_box">
@@ -57,9 +60,9 @@
 						<p>我的建议</p>
 					</a>
 				</li>
-				<li class="authority" style="display: none">
-					<a href="create_message.php">
-						<p>提出建议</p>
+				<li>
+					<a href="create_message.php" class="link">
+						<p class="authority">提出建议</p>
 					</a>
 				</li>
 			</ul>

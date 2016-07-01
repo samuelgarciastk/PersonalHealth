@@ -24,6 +24,9 @@
 						<li class="fl tc">
 							<a href="../activity/activity_list.php">活动</a>
 						</li>
+						<li class="fl tc attention" style="display: none">
+							<a href="../manage/manage_link.php">关注</a>
+						</li>
 					</ul>
 				</div>
 				<div class="user_box">
@@ -78,7 +81,12 @@
 			<div class="title">权限管理</div>
 			<span id="error_msg">&nbsp;</span>
 			<form id="added_form" class="tc">
-				<input type="text" id="userId" placeholder="用户名" />
+				<select id="userId" style="margin-left: -20px;">
+					<option value="Bob">Bob</option>
+					<option value="Caesar">Caesar</option>
+					<option value="Isaac">Isaac</option>
+					<option value="Zed">Zed</option>
+				</select>
 				<div>
 					<input type="radio" name="radio_auth" id="doctor" value="2" />
 					<label for="doctor">医生</label>

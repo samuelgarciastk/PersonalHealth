@@ -23,6 +23,9 @@
 						<li class="fl tc">
 							<a href="activity_list.php" class="on">活动</a>
 						</li>
+						<li class="fl tc attention" style="display: none">
+							<a href="../manage/manage_link.php">关注</a>
+						</li>
 					</ul>
 				</div>
 				<div class="user_box">

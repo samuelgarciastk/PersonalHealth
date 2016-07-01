@@ -22,17 +22,20 @@ function createMessage() {
 		'content': content,
 		'class': classType},
 		success: function(data) {
-			if (data) {
-				showMsg('提出建议成功');
-			} else {
-				showMsg('无法提出建议');
-			}
+			showMsg('提出建议成功');
 		}
 	});
 }
 function changeType() {
 	if ($("input[name='msg_type']:checked").val() == 1) {
-		html = "<div><label for='form_user'>建议接受者</label><input type='text' id='form_user'></div>";
+		html = "<div><label for='form_user'>建议接受者</label>" +
+			"<select id='form_user'>" +
+			"<option value='Admin'>Admin</option>" +
+			"<option value='Bob'>Bob</option>" +
+			"<option value='Caesar'>Caesar</option>" +
+			"<option value='Isaac'>Isaac</option>" +
+			"<option value='Zed'>Zed</option>" +
+			"</select></div>";
 		$(html).insertAfter($($(".form_create").children("div").get(0)));
 	} else {
 		$($(".form_create").children("div").get(1)).remove();

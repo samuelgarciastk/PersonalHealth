@@ -24,6 +24,9 @@
 						<li class="fl tc">
 							<a href="../activity/activity_list.php">活动</a>
 						</li>
+						<li class="fl tc attention" style="display: none">
+							<a href="../manage/manage_link.php">关注</a>
+						</li>
 					</ul>
 				</div>
 				<div class="user_box">
@@ -57,9 +60,9 @@
 						<p>我的建议</p>
 					</a>
 				</li>
-				<li class="authority" style="display: none">
-					<a href="create_message.php" class="on">
-						<p>提出建议</p>
+				<li>
+					<a href="create_message.php" class="on link">
+						<p class="authority">提出建议</p>
 					</a>
 				</li>
 			</ul>
@@ -71,9 +74,9 @@
 				<div>
 					<label>建议类型</label>
 					<input type="radio" name="msg_type" id="system_msg" value="0" onchange="changeType()" checked="checked">
-					<label for="system_msg" class="special">系统建议</label>
+					<label for="system_msg" class="special">公开建议</label>
 					<input type="radio" name="msg_type" id="user_msg" value="1" onchange="changeType()">
-					<label for="user_msg" class="special">用户建议</label>
+					<label for="user_msg" class="special" style="width: 150px;">针对用户的建议</label>
 				</div>
 				<div>
 					<label for="form_title">建议题目</label>
