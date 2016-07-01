@@ -18,7 +18,7 @@
 		</div>
 		<div class="content_bg">
 			<div class="content-l fl tc">
-				<img src="../images/blank_portrait.png" alt="advertisement">
+				<img src="../images/handround.png" alt="advertisement">
 			</div>
 			<div class="content-r">
 				<form id="form_login">
